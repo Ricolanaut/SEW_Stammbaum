@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Collections.ObjectModel;
+using System.Collections;
 
 namespace Stammbaum
 {
@@ -32,7 +33,7 @@ namespace Stammbaum
             PersonenCollection = new ObservableCollection<Person>();
             BeziehungenCollection = new ObservableCollection<Beziehung>();
 
-            using (StreamReader srp = new StreamReader(@"L:\Stammbaum_neu\personen.csv"))
+            using (StreamReader srp = new StreamReader(@"..\..\..\personen.csv"))
             {
                 string zeilep;
                 while ((zeilep = srp.ReadLine()) != null)
@@ -70,7 +71,7 @@ namespace Stammbaum
                 }
             }
 
-            using (StreamReader srb = new StreamReader(@"L:\Stammbaum_neu\beziehungen.csv"))
+            using (StreamReader srb = new StreamReader(@"..\..\..\beziehungen.csv"))
             {
                 string zeileb;
                 while ((zeileb = srb.ReadLine()) != null)
@@ -88,19 +89,31 @@ namespace Stammbaum
         }
 
         List<string> Familiefinden(int id, ObservableCollection<Person> pc, ObservableCollection<Beziehung> bc)
-        {
-            List<string> erg = new List<string>();
+        {            
+            Queue q = new Queue();
             id++;
             foreach (var item in bc)
             {
-                if (item.Ziel == id)
+                try
                 {
-                    erg.Add(item.Rolle +
-                            ": " + pc[item.Quelle - 1].Vorname
-                            + " " + pc[item.Quelle - 1].Nachname
-                            + " | * " + pc[item.Quelle - 1].Gebdatum);
-                }               
+                    if (item.Ziel == id)
+                    {
+                        q.Enqueue(item.Rolle +
+                                ": " + pc[item.Quelle - 1].Vorname
+                                + " " + pc[item.Quelle - 1].Nachname
+                                + " | * " + pc[item.Quelle - 1].Gebdatum);
+                    }
+                }
+                catch
+                {
+                    throw new FileException();
+                }
             }
+            List<string> erg = new List<string>();           
+            foreach (string item in q)
+            {
+                erg.Add(item);
+            }       
             return erg;
         }
 
@@ -148,7 +161,18 @@ namespace Stammbaum
             public int Ziel { get; set; }
             public string Rolle { get; set; }
         }
-       
+        
+        class FileException : Exception
+        {
+            public override string Message
+            {
+                get
+                {
+                    return "Der Inhalt einer CSV-Datei ist inkorrekt!";
+                }
+            }
+        }
+
         private void lb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -160,9 +184,16 @@ namespace Stammbaum
         }
 
         private void bt_fa_Click(object sender, RoutedEventArgs e)
-        {            
-            List<string> ausgabe = Familiefinden(lb.SelectedIndex, PersonenCollection, BeziehungenCollection);
-            lb_f.ItemsSource = ausgabe;     
+        {
+            try
+            {
+                List<string> ausgabe = Familiefinden(lb.SelectedIndex, PersonenCollection, BeziehungenCollection);
+                lb_f.ItemsSource = ausgabe;
+            }
+            catch (FileException f)
+            {
+                MessageBox.Show("Fehler: " + f.Message);
+            }
         }
 
         private void bt_clear_Click(object sender, RoutedEventArgs e)

@@ -89,3 +89,17 @@ L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.cache
 L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csproj.CoreCompileInputs.cache
 L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.exe
 L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.pdb
+F:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.exe.config
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.exe
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.pdb
+F:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.exe
+F:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.pdb
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+F:\Stammbaum_neu\Stammbaum\obj\Debug\MainWindow.g.cs
+F:\Stammbaum_neu\Stammbaum\obj\Debug\App.g.cs
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+F:\Stammbaum_neu\Stammbaum\obj\Debug\MainWindow.baml
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.g.resources
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+F:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.Cache
