@@ -1,0 +1,15 @@
+﻿<Window x:Class="Stammbaum.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stammbaum"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="lb_f" HorizontalAlignment="Left" Height="327" Margin="472,44,0,0" VerticalAlignment="Top" Width="320" SelectionChanged="lb_f_SelectionChanged"/>
+        <ListBox x:Name="lb" HorizontalAlignment="Left" Height="327" Margin="0,44,0,0" VerticalAlignment="Top" Width="472" SelectionChanged="lb_SelectionChanged"/>
+        <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Left" Margin="374,389,0,0" VerticalAlignment="Top" Width="98" Click="bt_fa_Click"/>
+
+    </Grid>
+</Window>
