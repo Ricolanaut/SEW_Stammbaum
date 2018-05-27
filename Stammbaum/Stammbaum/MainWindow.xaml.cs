@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Collections.ObjectModel;
 
 namespace Stammbaum
 {
@@ -21,19 +22,21 @@ namespace Stammbaum
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Person> PersonenListe;       
+        ObservableCollection<Person> PersonenCollection { get; set; }
+        List<Beziehung> BeziehungenListe;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            PersonenListe = new List<Person>();            
+            PersonenCollection = new ObservableCollection<Person>();
+            BeziehungenListe = new List<Beziehung>();
 
             using (StreamReader srp = new StreamReader(@"L:\Stammbaum\personen.csv"))
             {
                 string zeilep;
                 while ((zeilep = srp.ReadLine()) != null)
-                {
+                {                   
                     string[] spalte = zeilep.Split(';');
 
                     if (spalte[1] == "K")
@@ -48,9 +51,9 @@ namespace Stammbaum
                             Geschlecht = spalte[5],
                             Schule = spalte[6]
                         };
-                        PersonenListe.Add(k);
+                        PersonenCollection.Add(k);
                     }
-                    else if (spalte[1] == "E")
+                    else if(spalte[1] == "E")
                     {
                         Erwachsener e = new Erwachsener()
                         {
@@ -62,11 +65,27 @@ namespace Stammbaum
                             Geschlecht = spalte[5],
                             Beruf = spalte[6]
                         };
-                        PersonenListe.Add(e);
+                        PersonenCollection.Add(e);
                     }
-                    lb.ItemsSource = PersonenListe;
-                }               
-            }
+                    lb.ItemsSource = PersonenCollection;
+                }
+
+                using (StreamReader srb = new StreamReader(@"L:\Stammbaum\beziehungen.csv"))
+                {
+                    string zeileb;
+                    while ((zeileb = srb.ReadLine()) != null)
+                    {                      
+                        string[] spalte = zeileb.Split(';');
+                        Beziehung b = new Beziehung()
+                        {
+                            Quelle = Convert.ToInt32(spalte[0]),
+                            Ziel = Convert.ToInt32(spalte[1]),
+                            Rolle = (spalte[2])
+                        };
+                        BeziehungenListe.Add(b);                        
+                    }
+                }
+            }           
         }
 
         abstract class Person
@@ -76,7 +95,7 @@ namespace Stammbaum
             public string Vorname { get; set; }
             public string Nachname { get; set; }
             public string Gebdatum { get; set; }
-            public string Geschlecht { get; set; }
+            public string Geschlecht { get; set; }          
         }
 
         class Kind : Person
@@ -95,7 +114,7 @@ namespace Stammbaum
 
         class Erwachsener : Person
         {
-            public string Beruf { get; set; }
+            public string Beruf { get; set; }           
 
             public override string ToString()
             {
@@ -111,22 +130,24 @@ namespace Stammbaum
         {
             public int Quelle { get; set; }
             public int Ziel { get; set; }
-            public string Rolle { get; set; }
+            public string Rolle { get; set; }                     
         }
-       
+
         private void lb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
 
         private void lb_f_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+        {           
+            
         }
 
         private void bt_fa_Click(object sender, RoutedEventArgs e)
         {
-
+            lb_f.Items.Clear();
+            string inhalt = lb.SelectedItem.ToString();                
+            lb_f.Items.Add(inhalt);           
         }
     }
 }

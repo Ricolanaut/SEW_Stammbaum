@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <ListBox x:Name="lb_f" HorizontalAlignment="Left" Height="327" Margin="472,44,0,0" VerticalAlignment="Top" Width="320" SelectionChanged="lb_f_SelectionChanged"/>
-        <ListBox x:Name="lb" HorizontalAlignment="Left" Height="327" Margin="0,44,0,0" VerticalAlignment="Top" Width="472" SelectionChanged="lb_SelectionChanged"/>
-        <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Left" Margin="374,389,0,0" VerticalAlignment="Top" Width="98" Click="bt_fa_Click"/>
+        <ListBox x:Name="lb" HorizontalAlignment="Left" Height="340" Margin="10,10,0,0" VerticalAlignment="Top" Width="502" SelectionChanged="lb_SelectionChanged"/>
+        <ListBox x:Name="lb_f" HorizontalAlignment="Left" Height="340" Margin="517,10,0,0" VerticalAlignment="Top" Width="265" SelectionChanged="lb_f_SelectionChanged"/>
+        <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Left" Margin="274,355,0,0" VerticalAlignment="Top" Width="238" Height="54" Click="bt_fa_Click"/>
 
     </Grid>
 </Window>

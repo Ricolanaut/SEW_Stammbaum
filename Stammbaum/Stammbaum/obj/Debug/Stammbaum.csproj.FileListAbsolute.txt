@@ -1,1 +1,62 @@
-F:\Sb_Git\Stammbaum1\Stammbaum\bin\Debug\Stammbaum.exe.config
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe.config
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\bin\Debug\Stammbaum.pdb
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\MainWindow.g.cs
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\App.g.cs
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\MainWindow.baml
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.g.resources
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.cache
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csproj.CoreCompileInputs.cache
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.exe
+C:\Users\Rico\Desktop\Stammbaum\Stammbaum\obj\Debug\Stammbaum.pdb
+D:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe.config
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.exe
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.pdb
+D:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe
+D:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.pdb
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+D:\Stammbaum\Stammbaum\obj\Debug\MainWindow.g.cs
+D:\Stammbaum\Stammbaum\obj\Debug\App.g.cs
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+D:\Stammbaum\Stammbaum\obj\Debug\MainWindow.baml
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.g.resources
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+D:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.Cache
+E:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe.config
+E:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.exe
+E:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.pdb
+L:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe.config
+L:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.exe
+L:\Stammbaum\Stammbaum\bin\Debug\Stammbaum.pdb
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+L:\Stammbaum\Stammbaum\obj\Debug\MainWindow.g.cs
+L:\Stammbaum\Stammbaum\obj\Debug\App.g.cs
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+L:\Stammbaum\Stammbaum\obj\Debug\MainWindow.baml
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.g.resources
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.cache
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.csproj.CoreCompileInputs.cache
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.exe
+L:\Stammbaum\Stammbaum\obj\Debug\Stammbaum.pdb
+L:\Stammbaum - Kopie\Stammbaum\bin\Debug\Stammbaum.exe.config
+L:\Stammbaum - Kopie\Stammbaum\bin\Debug\Stammbaum.exe
+L:\Stammbaum - Kopie\Stammbaum\bin\Debug\Stammbaum.pdb
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\MainWindow.g.cs
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\App.g.cs
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\MainWindow.baml
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.g.resources
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.cache
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.csproj.CoreCompileInputs.cache
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.exe
+L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.pdb
