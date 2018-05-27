@@ -12,8 +12,9 @@
             <ListBox x:Name="lb_f" HorizontalAlignment="Left" Margin="0,28,0,0" Width="302" DockPanel.Dock="Right"/>
         </DockPanel>
         <DockPanel LastChildFill="True" Height="55" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="792">
-            <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Left" Margin="320,0,0,10" Width="160" Click="bt_fa_Click" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Left"/>
-            <Button x:Name="bt_clear" Content="Leeren" HorizontalAlignment="Left" Margin="222,0,0,10" Width="80" Click="bt_clear_Click" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Right"/>
+            <Button x:Name="bt_fs" Content="Familie speichern" Height="35" VerticalAlignment="Center" Margin="10,0,0,0" Width="160" DockPanel.Dock="Left" Click="bt_fs_Click"/>
+            <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Center" Margin="150,0,0,10" Width="160" Click="bt_fa_Click" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Left"/>
+            <Button x:Name="bt_clear" Content="Leeren" HorizontalAlignment="Center" Margin="212,0,0,10" Width="80" Click="bt_clear_Click" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Right"/>
         </DockPanel>
     </Grid>
 </Window>

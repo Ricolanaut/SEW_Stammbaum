@@ -1,0 +1,12 @@
+Max Mustermann | * 01.01.1990 | Vater von Markus Mustermann
+Max Mustermann | * 01.01.1990 | Vater von Marie Mustermann
+Max Mustermann | * 01.01.1990 | Ehemann von Mia Mustermann
+Markus Mustermann | * 01.01.2000 | Sohn von Max Mustermann
+Markus Mustermann | * 01.01.2000 | Bruder von Marie Mustermann
+Markus Mustermann | * 01.01.2000 | Sohn von Mia Mustermann
+Marie Mustermann | * 01.01.2000 | Tochter von Max Mustermann
+Marie Mustermann | * 01.01.2000 | Schwester von Markus Mustermann
+Marie Mustermann | * 01.01.2000 | Tochter von Mia Mustermann
+Mia Mustermann | * 01.01.1990 | Ehefrau von Max Mustermann
+Mia Mustermann | * 01.01.1990 | Mutter von Markus Mustermann
+Mia Mustermann | * 01.01.1990 | Mutter von Marie Mustermann

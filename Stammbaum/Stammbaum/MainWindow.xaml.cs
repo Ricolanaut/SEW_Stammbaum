@@ -106,7 +106,7 @@ namespace Stammbaum
                 }
                 catch
                 {
-                    throw new FileException();
+                    throw new CSVFileException();
                 }
             }
             List<string> erg = new List<string>();           
@@ -114,6 +114,39 @@ namespace Stammbaum
             {
                 erg.Add(item);
             }       
+            return erg;
+        }
+
+        List<string> Familiespeichern(ObservableCollection<Person> pc, ObservableCollection<Beziehung> bc)
+        {
+            Queue q = new Queue();
+            foreach (var item in bc)
+            {
+                foreach (var item2 in pc)
+                {
+                    try
+                    {
+                        if (item.Ziel == item2.ID)
+                        {
+                            q.Enqueue(pc[item.Quelle - 1].Vorname
+                                        + " " + pc[item.Quelle - 1].Nachname
+                                        + " | * " + pc[item.Quelle - 1].Gebdatum                                       
+                                        + " | " + item.Rolle
+                                        + " von " + item2.Vorname
+                                        + " " + item2.Nachname);
+                        }
+                    }
+                    catch
+                    {
+                        throw new TXTFileException();
+                    }
+                }
+            }
+            List<string> erg = new List<string>();
+            foreach (string item in q)
+            {
+                erg.Add(item);
+            }
             return erg;
         }
 
@@ -162,13 +195,24 @@ namespace Stammbaum
             public string Rolle { get; set; }
         }
         
-        class FileException : Exception
+        class CSVFileException : Exception
         {
             public override string Message
             {
                 get
                 {
-                    return "Der Inhalt einer CSV-Datei ist inkorrekt!";
+                    return "Der Inhalt einer CSV-Datei ist inkorrekt oder die Datei existiert nicht!";
+                }
+            }           
+        }
+
+        class TXTFileException : Exception
+        {
+            public override string Message
+            {
+                get
+                {
+                    return "Die TXT-Datei existiert nicht!";
                 }
             }
         }
@@ -190,15 +234,31 @@ namespace Stammbaum
                 List<string> ausgabe = Familiefinden(lb.SelectedIndex, PersonenCollection, BeziehungenCollection);
                 lb_f.ItemsSource = ausgabe;
             }
-            catch (FileException f)
+            catch (CSVFileException csve)
             {
-                MessageBox.Show("Fehler: " + f.Message);
+                MessageBox.Show("Fehler: " + csve.Message);
             }
         }
 
         private void bt_clear_Click(object sender, RoutedEventArgs e)
         {
             lb_f.ItemsSource = null;
-        }       
+        }
+
+        private void bt_fs_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                List<string> speicher = Familiespeichern(PersonenCollection, BeziehungenCollection);
+                StreamWriter swf = new StreamWriter(@"..\..\..\familie.txt");
+                speicher.ForEach(swf.WriteLine);
+                swf.Close();
+                MessageBox.Show("Familie wurde gespeichert!");
+            }
+            catch (TXTFileException txte)
+            {
+                MessageBox.Show("Fehler: " + txte.Message);
+            }
+        }
     }
 }

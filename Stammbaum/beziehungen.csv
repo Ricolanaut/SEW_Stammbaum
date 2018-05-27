@@ -1,6 +1,12 @@
 1;2;Vater
 1;3;Vater
+1;4;Ehemann
 2;1;Sohn
 2;3;Bruder
+2;4;Sohn
 3;1;Tochter
 3;2;Schwester
+3;4;Tochter
+4;1;Ehefrau
+4;2;Mutter
+4;3;Mutter
