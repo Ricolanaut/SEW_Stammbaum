@@ -7,10 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Left" Margin="320,374,0,0" VerticalAlignment="Top" Width="160" Height="35" Click="bt_fa_Click"/>
-        <Button x:Name="bt_clear" Content="Leeren" HorizontalAlignment="Left" Margin="702,374,0,0" VerticalAlignment="Top" Width="80" Height="35" Click="bt_clear_Click"/>
-        <ListBox x:Name="lb" HorizontalAlignment="Left" Height="336" Margin="10,28,0,0" VerticalAlignment="Top" Width="470"/>
-        <ListBox x:Name="lb_f" HorizontalAlignment="Left" Height="336" Margin="480,28,0,0" VerticalAlignment="Top" Width="302"/>
-
+        <DockPanel LastChildFill="True" Margin="0,0,0,55" HorizontalAlignment="Right" Width="792">
+            <ListBox x:Name="lb" HorizontalAlignment="Left" Margin="10,28,0,0" Width="470" DockPanel.Dock="Left"/>
+            <ListBox x:Name="lb_f" HorizontalAlignment="Left" Margin="0,28,0,0" Width="302" DockPanel.Dock="Right"/>
+        </DockPanel>
+        <DockPanel LastChildFill="True" Height="55" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="792">
+            <Button x:Name="bt_fa" Content="Familie anzeigen" HorizontalAlignment="Left" Margin="320,0,0,10" Width="160" Click="bt_fa_Click" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Left"/>
+            <Button x:Name="bt_clear" Content="Leeren" HorizontalAlignment="Left" Margin="222,0,0,10" Width="80" Click="bt_clear_Click" Height="35" VerticalAlignment="Bottom" DockPanel.Dock="Right"/>
+        </DockPanel>
     </Grid>
 </Window>
