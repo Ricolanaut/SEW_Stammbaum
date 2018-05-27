@@ -23,22 +23,21 @@ namespace Stammbaum
     public partial class MainWindow : Window
     {
         ObservableCollection<Person> PersonenCollection { get; set; }
-        List<Beziehung> BeziehungenListe;
+        ObservableCollection<Beziehung> BeziehungenCollection { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
 
             PersonenCollection = new ObservableCollection<Person>();
-            BeziehungenListe = new List<Beziehung>();
+            BeziehungenCollection = new ObservableCollection<Beziehung>();
 
-            using (StreamReader srp = new StreamReader(@"L:\Stammbaum\personen.csv"))
+            using (StreamReader srp = new StreamReader(@"L:\Stammbaum_neu\personen.csv"))
             {
                 string zeilep;
                 while ((zeilep = srp.ReadLine()) != null)
                 {                   
                     string[] spalte = zeilep.Split(';');
-
                     if (spalte[1] == "K")
                     {
                         Kind k = new Kind()
@@ -69,23 +68,40 @@ namespace Stammbaum
                     }
                     lb.ItemsSource = PersonenCollection;
                 }
+            }
 
-                using (StreamReader srb = new StreamReader(@"L:\Stammbaum\beziehungen.csv"))
-                {
-                    string zeileb;
-                    while ((zeileb = srb.ReadLine()) != null)
-                    {                      
-                        string[] spalte = zeileb.Split(';');
-                        Beziehung b = new Beziehung()
-                        {
-                            Quelle = Convert.ToInt32(spalte[0]),
-                            Ziel = Convert.ToInt32(spalte[1]),
-                            Rolle = (spalte[2])
-                        };
-                        BeziehungenListe.Add(b);                        
-                    }
+            using (StreamReader srb = new StreamReader(@"L:\Stammbaum_neu\beziehungen.csv"))
+            {
+                string zeileb;
+                while ((zeileb = srb.ReadLine()) != null)
+                {                      
+                    string[] spalte = zeileb.Split(';');
+                    Beziehung b = new Beziehung()
+                    {
+                        Quelle = Convert.ToInt32(spalte[0]),
+                        Ziel = Convert.ToInt32(spalte[1]),
+                        Rolle = spalte[2]
+                    };
+                    BeziehungenCollection.Add(b);                        
                 }
-            }           
+            }                                  
+        }
+
+        List<string> Familiefinden(int id, ObservableCollection<Person> pc, ObservableCollection<Beziehung> bc)
+        {
+            List<string> erg = new List<string>();
+            id++;
+            foreach (var item in bc)
+            {
+                if (item.Ziel == id)
+                {
+                    erg.Add(item.Rolle +
+                            ": " + pc[item.Quelle - 1].Vorname
+                            + " " + pc[item.Quelle - 1].Nachname
+                            + " | * " + pc[item.Quelle - 1].Gebdatum);
+                }               
+            }
+            return erg;
         }
 
         abstract class Person
@@ -95,7 +111,7 @@ namespace Stammbaum
             public string Vorname { get; set; }
             public string Nachname { get; set; }
             public string Gebdatum { get; set; }
-            public string Geschlecht { get; set; }          
+            public string Geschlecht { get; set; }
         }
 
         class Kind : Person
@@ -104,25 +120,25 @@ namespace Stammbaum
 
             public override string ToString()
             {
-                return "Nachname: " + Nachname +
-                       ", Vorname: " + Vorname +
-                       ", Geburtsdatum: " + Gebdatum +
-                       ", Geschlecht: " + Geschlecht +
-                       ", Schule: " + Schule;
+                return Vorname +
+                       " " + Nachname +
+                       " | * " + Gebdatum +
+                       " | " + Geschlecht +
+                       " | Schule: " + Schule;
             }
         }
 
         class Erwachsener : Person
         {
-            public string Beruf { get; set; }           
+            public string Beruf { get; set; }
 
             public override string ToString()
             {
-                return "Nachname: " + Nachname +
-                       ", Vorname: " + Vorname +
-                       ", Geburtsdatum: " + Gebdatum +
-                       ", Geschlecht: " + Geschlecht +
-                       ", Beruf: " + Beruf;
+                return Vorname +
+                       " " + Nachname +
+                       " | * " + Gebdatum +
+                       " | " + Geschlecht +
+                       " | Beruf: " + Beruf;
             }
         }
 
@@ -130,9 +146,9 @@ namespace Stammbaum
         {
             public int Quelle { get; set; }
             public int Ziel { get; set; }
-            public string Rolle { get; set; }                     
+            public string Rolle { get; set; }
         }
-
+       
         private void lb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -144,10 +160,14 @@ namespace Stammbaum
         }
 
         private void bt_fa_Click(object sender, RoutedEventArgs e)
-        {
-            lb_f.Items.Clear();
-            string inhalt = lb.SelectedItem.ToString();                
-            lb_f.Items.Add(inhalt);           
+        {            
+            List<string> ausgabe = Familiefinden(lb.SelectedIndex, PersonenCollection, BeziehungenCollection);
+            lb_f.ItemsSource = ausgabe;     
         }
+
+        private void bt_clear_Click(object sender, RoutedEventArgs e)
+        {
+            lb_f.ItemsSource = null;
+        }       
     }
 }

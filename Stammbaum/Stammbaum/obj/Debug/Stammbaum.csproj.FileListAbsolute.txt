@@ -60,3 +60,32 @@ L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.cache
 L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.csproj.CoreCompileInputs.cache
 L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.exe
 L:\Stammbaum - Kopie\Stammbaum\obj\Debug\Stammbaum.pdb
+E:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.exe.config
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.exe
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.pdb
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+E:\Stammbaum_neu\Stammbaum\obj\Debug\MainWindow.g.cs
+E:\Stammbaum_neu\Stammbaum\obj\Debug\App.g.cs
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+E:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.exe
+E:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.pdb
+E:\Stammbaum_neu\Stammbaum\obj\Debug\MainWindow.baml
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.g.resources
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+E:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.Cache
+L:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.exe.config
+L:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.exe
+L:\Stammbaum_neu\Stammbaum\bin\Debug\Stammbaum.pdb
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csprojResolveAssemblyReference.cache
+L:\Stammbaum_neu\Stammbaum\obj\Debug\MainWindow.g.cs
+L:\Stammbaum_neu\Stammbaum\obj\Debug\App.g.cs
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.cache
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum_MarkupCompile.lref
+L:\Stammbaum_neu\Stammbaum\obj\Debug\MainWindow.baml
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.g.resources
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.Properties.Resources.resources
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csproj.GenerateResource.cache
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.csproj.CoreCompileInputs.cache
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.exe
+L:\Stammbaum_neu\Stammbaum\obj\Debug\Stammbaum.pdb
